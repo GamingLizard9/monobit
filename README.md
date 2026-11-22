@@ -3,6 +3,12 @@
 A black-and-white pixel art editor built with **Tauri 2 + Rust** (backend) and **TypeScript + Vite** (frontend).
 Every pixel is either black or white; greys are made with dither patterns.
 
+![Monobit editor with a Badger OS mockup open](docs/screenshots/editor.png)
+
+![Monobit in the inverted dark theme](docs/screenshots/dark.png)
+
+The mockup in these screenshots is included as [docs/examples/badger-os.monobit](docs/examples/badger-os.monobit) — open it from File → Open.
+
 ## Features
 
 **Canvas & documents**
