@@ -19,7 +19,7 @@ export function titleBar() {
   const bar = h(
     'div',
     { class: 'titlebar', 'data-tauri-drag-region': true },
-    h('div', { class: 'tb-left' }, h('img', { class: 'tb-logo', src: '/app-icon-64.png', alt: '' })),
+    h('div', { class: 'tb-left' }, h('img', { class: 'tb-logo', src: import.meta.env.BASE_URL + 'app-icon-64.png', alt: '' })),
     h('span', { class: 'stripes', 'data-tauri-drag-region': true }),
     title,
     h('span', { class: 'stripes', 'data-tauri-drag-region': true }),

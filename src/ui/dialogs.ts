@@ -468,7 +468,7 @@ export function aboutDialog() {
   logo.width = 64;
   logo.height = 64;
   const img = new Image();
-  img.src = '/app-icon-64.png';
+  img.src = import.meta.env.BASE_URL + 'app-icon-64.png';
   let lvl = 0;
   const ctx = logo.getContext('2d')!;
   const tick = () => {
