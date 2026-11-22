@@ -1,0 +1,37 @@
+{
+  "name": "monobit",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:web": "tsc --noEmit && vite build --base=./ --outDir dist-web",
+    "preview:web": "vite preview --outDir dist-web",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.6",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.6"
+  },
+  "dependencies": {
+    "@fontsource/bytesized": "^5.3.0",
+    "@fontsource/dotgothic16": "^5.3.1",
+    "@fontsource/doto": "^5.3.0",
+    "@fontsource/handjet": "^5.3.1",
+    "@fontsource/jacquard-12": "^5.3.0",
+    "@fontsource/jersey-10": "^5.3.0",
+    "@fontsource/micro-5": "^5.3.0",
+    "@fontsource/pixelify-sans": "^5.3.0",
+    "@fontsource/press-start-2p": "^5.3.0",
+    "@fontsource/silkscreen": "^5.3.0",
+    "@fontsource/sixtyfour": "^5.3.0",
+    "@fontsource/tiny5": "^5.3.0",
+    "@fontsource/vt323": "^5.3.0",
+    "@fontsource/workbench": "^5.3.0",
+    "@tauri-apps/api": "^2.12.5",
+    "@tauri-apps/plugin-dialog": "^2.8.4"
+  }
+}
