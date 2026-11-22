@@ -83,7 +83,7 @@ export async function newDocDialog() {
       { label: 'Create', value: 'ok', primary: true },
     ],
     'cancel',
-    { width: 640 },
+    { width: 720 },
   );
   if ((await m.result) === 'ok') A.createDoc(Math.max(1, Math.min(4096, st.w)), Math.max(1, Math.min(4096, st.h)), st.bg);
 }

@@ -1470,14 +1470,14 @@ textarea.text-input {
 }
 .preset-grid {
   display: grid;
-  grid-template-columns: repeat(4, 92px);
+  grid-template-columns: repeat(4, 112px);
   gap: 8px;
 }
 .preset {
   border: var(--b) solid var(--ink);
   border-radius: 5px;
   background: var(--paper);
-  padding: 6px 4px;
+  padding: 6px 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1507,7 +1507,8 @@ textarea.text-input {
 }
 .preset-name {
   font-size: 13px;
-  white-space: nowrap;
+  text-align: center;
+  line-height: 1.15;
 }
 .preset-size {
   font-family: var(--mono);
@@ -1576,8 +1577,20 @@ textarea.text-input {
   background: var(--ink);
   color: var(--paper);
 }
+/* scale: label above, buttons share the column width equally */
+.export-left .field {
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 4px;
+}
 .export-left .seg {
-  flex-wrap: wrap;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+.export-left .seg-btn {
+  justify-content: center;
+  padding: 2px 0;
 }
 .export-right {
   flex: 1;
