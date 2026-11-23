@@ -7,8 +7,56 @@
     <link rel="icon" type="image/png" href="app-icon-64.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="theme-color" content="#000000" />
+    <style>
+      /* The fixed toolbox + docks need ~650px of width and ~440px of height;
+         below 800x440 the canvas shrinks to a sliver, so show a notice instead.
+         Inline so it shows before the app bundle loads. The desktop window's
+         minimum size (1000x640) keeps this from ever showing there. */
+      #small-screen {
+        display: none;
+      }
+      @media (max-width: 799px), (max-height: 439px) {
+        #small-screen {
+          position: fixed;
+          inset: 0;
+          z-index: 2147483647;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          padding: 24px;
+          text-align: center;
+          background: var(--paper, #fff);
+          color: var(--ink, #000);
+          font-family: 'Silkscreen', 'Pixelify Sans', monospace;
+          font-size: 16px;
+          line-height: 1.4;
+        }
+        #small-screen h1 {
+          margin: 0;
+          font-size: 22px;
+          letter-spacing: 1px;
+        }
+        #small-screen p {
+          margin: 0;
+          max-width: 320px;
+          font-family: 'Pixelify Sans', 'Segoe UI', sans-serif;
+        }
+        #small-screen img {
+          width: 64px;
+          height: 64px;
+          image-rendering: pixelated;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="small-screen" role="alert">
+      <img src="app-icon-64.png" alt="" />
+      <h1>MONOBIT</h1>
+      <p>This screen is too small for Monobit. Please open it on a larger screen, like a laptop or desktop.</p>
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
